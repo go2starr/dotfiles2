@@ -33,11 +33,11 @@ alias now="date +%s"
 alias emacs='emacsclient -t'
 
 function eclean {
-  for file in $(find . | egrep "(\.#|#.*#|~)$"); do
+  for file in $(find . | egrep "(\.#|#.*#|~$)"); do
     echo removing: $file
     rm $file
   done
-}    
+}
 
 function e {
     nargs=$#
